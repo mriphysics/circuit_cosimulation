@@ -19,8 +19,8 @@
 % authors.
 
 %%% Load in the data and example lumped element values.
-load S-Params-allports.mat
-load LumpedValsTest
+load S-Params-allports.mat % <- Download this example set from http://bit.ly/1H1sJLO
+load bin/LumpedValsTest
 
 
 %% Generate combined S-parameters and plot them
@@ -37,8 +37,9 @@ S_reduced = gen_sparam_response(S,Freqs,8,120,lumpedVals);
 % latter variable allows multiple ports to be treated as having the same
 % capacitance such that the user doesn't need to optimise every port
 % independently)
-load OptInitVals
+load bin/OptInitVals
 
 % Perform optimization
 lambda = 2; %<- sets trade off between decoupling and matching
 [lumpOpt,Sopt] = circ_co_sim_optimisation(S,Freqs,8,120,capValsInit,portCapInds,lambda);
+
