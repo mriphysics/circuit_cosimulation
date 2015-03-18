@@ -19,7 +19,7 @@
 % authors.
 
 %%% Load in the data and example lumped element values.
-load S-Params-allports.mat % <- Download this example set from http://bit.ly/1H1sJLO
+load S-Params-allports.mat % <- Download this example set from the releases page
 load bin/LumpedValsTest
 
 

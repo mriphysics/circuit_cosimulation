@@ -2,10 +2,12 @@
 
 ### A MATLAB implementation of circuit co-simulation
 
-Circuit co-simulation is a method for interactively adapting EM simulations of radio-frequency devices. The basic principal is to replace lumped components by ports when running a simulation. For example a 2-port device with 10 lumped components would be simulated as a 12 port device. The advantage is that from this larger data-set, a reduced 2-port model can be deterimined by assigning any impedance to the lumped elements without running another full EM simulation. This enables the behaviour of the system with different electrical properties to be seen very quickly. The Matlab code in this repo is for performing this combination. The methods are fully described in this [publication](http://dx.doi.org/10.1002/mrm.25504): please cite this in any work resulting from use of our code.
+Circuit co-simulation is a method for interactively adapting EM simulations of radio-frequency devices. The basic principal is to replace lumped components by ports when running a simulation. For example a 2-port device with 10 lumped components would be simulated as a 12 port device. The advantage is that from this larger data-set, a reduced 2-port model can be deterimined by assigning any impedance to the lumped elements without running another full EM simulation. This enables the behaviour of the system with different electrical properties to be seen very quickly. The Matlab code in this repo is for performing this combination. The methods are fully described in this [publication](http://dx.doi.org/10.1002/mrm.25504): please consider citing this in any work resulting from use of our code.
 
-#### Worked Example:
-A worked example of an [8-port device](http://dx.doi.org/10.1002/mrm.21294) with 120 lumped elements is provided. Simply run the script **runme.m**. In order to run this code you will need to download binary data for the 128-port S-matrix generated using CST microwave studio from [here](http://bit.ly/1H1sJLO) *(note this is a ~150Mb Matlab mat file)*. 
+#### Downloading & Worked Example:
+Please either clone the repository or download a released version the [releases page]("https://github.com/mriphysics/circuit-cosimulation/releases")
+
+A worked example of an [8-port device](http://dx.doi.org/10.1002/mrm.21294) with 120 lumped elements is provided. Simply run the script **runme.m**. In order to run this code you will need to download binary data for the 128-port S-matrix generated using CST microwave studio. This binary is available from the [releases](https://github.com/mriphysics/circuit-cosimulation/releases) page  *(note this is a ~150Mb Matlab mat file)*. 
 
 ### Optimisation
 It is possible to use co-simulation to compute optimal lumped element values for tuning, matching and decoupling of RF devices. This is again described in our [publication](http://dx.doi.org/10.1002/mrm.25504) and an example is included in **runme.m**.
